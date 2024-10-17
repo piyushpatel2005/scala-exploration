@@ -7,5 +7,6 @@ Scala is a general-purpose programming language that is designed to express comm
 - [Introduction](introduction/index.md)
 - [Installation](installation/index.md)
 - [Variables, Values and Operators](variables-and-values/index.md)
+- [Type Hierarchy](type-hierarchy/index.md)
 - [Expressions and Functions](expressions-and-functions/index.md)
 - [Loops](loops/index.md)

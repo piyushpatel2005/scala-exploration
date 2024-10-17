@@ -4,7 +4,13 @@ Now that you're familiar with how to write and run your test codes in Scala, let
 
 ## Scala Values and Variables
 
-In Scala, just like any other language, we have concept of variables which are named memory locations to store values. The `val` keyword is used to declare what's also called values in Scala. The value of a `val` cannot be changed once it is assigned. While declaring a value, you can either explicitly specify the data type or let the Scala compiler infer the type for you.
+In Scala, just like any other language, we have concept of variables which are named memory locations to store values. The variable declaration looks like this.
+
+```scala
+keyword variableName: DataType = value
+```
+
+The `val` keyword is used to declare what's also called values in Scala. The value of a `val` cannot be changed once it is assigned. While declaring a value, you can either explicitly specify the data type or let the Scala compiler infer the type for you.
 
 ```scala
 val aVal: Int = 20
@@ -42,6 +48,20 @@ println("Hello World")
 
 /* This is a multi-line comment
    This is second line of comment */
+```
+
+As you can see above, you can print the variables or values using `println` function. This function is similar to `System.out.println` in Java. You could also use functions like `print` or `printf` to print the values.
+
+- `print`: This can be used to print anything to the console without a newline character at the end.
+- `println`: This can be used to print anything just like `print` method but it puts a new line character at the end of each output.
+- `printf`: This can be used to print formatted strings to the console. It is similar to `printf` in C language.
+
+```scala
+val name = "Akbar"
+print("Hello " + name)
+println() // prints new line after print
+println("Hello " + name)
+printf("Hello %s\n", name)
 ```
 
 ### Scala Semicolons
