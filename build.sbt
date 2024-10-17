@@ -1,6 +1,8 @@
 ThisBuild / version := "1.0.0"
 
-ThisBuild / scalaVersion := "3.0.0"
+ThisBuild / scalaVersion := "3.3.4"
+
+val zioVersion = "2.1.11"
 
 lazy val root = (project in file ("."))
   .settings(
@@ -14,4 +16,12 @@ lazy val core = (project in file("core")).settings(
 )
 lazy val zioExploration = (project in file("zio-exploration"))
   .dependsOn(core)
+  .settings(
+    libraryDependencies ++= Seq(
+      "dev.zio" %% "zio" % zioVersion withSources() withJavadoc(),
+      "dev.zio" %% "zio-streams" % zioVersion,
+      "dev.zio" %% "zio-test" % zioVersion % Test,
+      "dev.zio" %% "zio-test-sbt" % zioVersion % Test
+    )
+  )
 
