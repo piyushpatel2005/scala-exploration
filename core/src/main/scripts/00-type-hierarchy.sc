@@ -21,3 +21,11 @@ y.intValue()
 y.longValue()
 y.floatValue()
 
+// type information
+val greeting: String = "Hello"
+println(greeting.getClass)
+
+val number: Int = 51
+println(number.getClass)
+
+println(greeting.isInstanceOf[String])

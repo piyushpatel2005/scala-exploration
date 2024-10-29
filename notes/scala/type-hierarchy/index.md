@@ -11,7 +11,8 @@ Below figure shows Scala type hierarchy in brief. There are also other different
 At the top of the hierarchy we have `Any` which is a super type of all types in Scala. `Any` has two direct subclasses: `AnyVal` and `AnyRef`.
 
 ### `AnyVal`
-`AnyVal` is a super type of all value types in Scala. Value types are types that are represented as primitive types in Java. Examples of value types are `Int`, `Float`, `Double`, `Boolean`, `Char`, `Byte`, `Short` and `Long`. They have primitive equivalents in Java language. Usually these types are stored on the stack memory and are usually passed by value in method or function calls. You will learn more about what pass by value means in upcoming lessons.
+`AnyVal` is a super type of all value types in Scala. Value types are types that are represented as primitive types 
+in Java. Examples of value types are `Int`, `Float`, `Double`, `Boolean`, `Char`, `Byte`, `Short` and `Long`. They have primitive equivalents in Java language. These types are usually passed by value in method or function calls. You will learn more about what pass by value means in upcoming lessons.
 
 All value types are extended from `AnyVal` which in turn is extended from `Any`. Each of these value types have their equivalent rich classes in Scala. For example, `Int` has `RichInt`, `Float` has `RichFloat`, `Double` has `RichDouble` etc. These rich classes provide additional methods to the value types and makes them lot more convenient to work with in Scala. The `Double` type is implicitly converted into `RichDouble` when you call a method that is not available on `Double` type. You will learn more about implicit conversions in upcoming lessons. It's not important to know at the moment. It's just enough to know that value types have rich classes that provide additional methods.
 
@@ -22,6 +23,14 @@ All value types are extended from `AnyVal` which in turn is extended from `Any`.
 `Null` is a subtype of all reference types in Scala. It is used to represent a null value. It is not recommended to use `null` in Scala. Instead you should use `Option` type to represent a value that may or may not be present.
 
 `Nothing` is a subtype of all types in Scala. It is used to represent that a method or function does not return a value. It is also used to represent that a method or function throws an exception.
+
+### `Unit`
+
+Scala also has a special type called `Unit` which is similar to `void` in Java. The `Unit` can laos be represented 
+as empty pair of parentheses `()`. It's used to represent that a method or a function does not return any value.
+It is used to 
+represent that a 
+method or function does not return a value. 
 
 ## Practical Examples
 
@@ -78,4 +87,35 @@ x.toLong()
 
 x.toDouble()
 x.toFloat()
+```
+
+You can convert any value to a string using `toString` method.
+
+```scala
+val x: Int = 42
+x.toString()
+
+val y: Double = 3.14
+y.toString()
+```
+
+## Get Type of a Value
+
+Scala also provides rich set of methods for getting the type of a value or to check if a value is of a particular type.
+
+- You can use `getClass` method to get the type of a value.
+
+```scala
+val greeting: String = "Hello"
+println(greeting.getClass) // class java.lang.String
+
+val number: Int = 42
+println(number.getClass) // int
+```
+
+- You can use `isInstanceOf` method to check if a value is of a particular type. This can be used to verify if a value is of a particular type before performing any operation on it.
+
+```scala
+val greeting = "Hello"
+println(greeting.isInstanceOf[String]) // true
 ```

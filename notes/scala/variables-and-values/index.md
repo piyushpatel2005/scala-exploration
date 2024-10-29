@@ -38,6 +38,12 @@ In functional programming, it is recommended to use `val` as much as possible to
 
 If you try to change the value of `val`, you will get a compilation error.
 
+### Naming Convention
+
+Scala names can be letters, numbers and several special characters. The first character of the name should be a letter. The convention is to use camelCase for variable names. You can also use `_` in variable names.
+
+```scala
+
 ### Scala Comments
 
 In Scala, you've both single line and multi-line comments. Single line comments start with `//` and multi-line comments are enclosed in `/*` and `*/` just like Java.
@@ -71,28 +77,6 @@ In Scala, semicolons are optional. You can write multiple statements in a single
 ```scala
 println("Hello World")
 println("Hello Scala")
-```
-
-## Data Types
-
-Scala has a rich set of data types that you can use in your programs. It has all the built-in types of Java language.
-
-```scala
-val anInt: Int = 20
-val aLong: Long = 20L
-val aFloat: Float = 20.0f
-val aDouble: Double = 20.0
-val aChar: Char = 'a'
-val aString: String = "Hello"
-val aBoolean: Boolean = true
-```
-
-Scala also has rich collections library which contains similar collections as Java. You will learn about collections in upcoming lessons. Notice that you don't need the `new` keyword to create these collections unlike Java.
-
-```scala
-val aList = List(1, 2, 3)
-val aMap = Map("one" -> 1, "two" -> 2, "three" -> 3)
-val anArray = Array(1, 2, 3)
 ```
 
 ## Scala Operators
